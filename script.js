@@ -16,7 +16,7 @@
 
   const CLINIC = {
     name: 'HS Odontologia',
-    whatsapp: '+55 67 993292442',                 // DDI + DDD + número, só dígitos. TROQUE pelo número real.
+    whatsapp: '5567993292442',                 // DDI + DDD + número, só dígitos. TROQUE pelo número real.
     address: 'Rua Ceará, 1042 · Vila Barbosa, Aparecida do Taboado, MS',
     slotGrid: 30,                              // intervalo entre horários, em minutos
     leadMinutes: 60,                           // antecedência mínima para reservar no mesmo dia
