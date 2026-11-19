@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Áurea Odontologia | Agende sua consulta online</title>
+  <meta name="description" content="Odontologia com cuidado e sem pressa. Escolha o procedimento, o dia e o horário e reserve sua consulta online em poucos passos.">
+  <meta name="theme-color" content="#FBF8F1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%23C9A24A'/%3E%3Cpath transform='translate(3.6 3.4) scale(.7)' fill='%23fff' d='M7.5 3.5c-2.2 0-4 1.8-4 4.2 0 2 .8 3.4 1.5 5 .7 1.6.8 3.4 1.3 5.1.3 1.1 1.1 2 2.2 2 1.4 0 1.6-1.9 2-3.2.3-1 .8-1.6 1.5-1.6s1.2.6 1.5 1.6c.4 1.3.6 3.2 2 3.2 1.1 0 1.9-.9 2.2-2 .5-1.7.6-3.5 1.3-5.1.7-1.6 1.5-3 1.5-5 0-2.4-1.8-4.2-4-4.2-1.7 0-2.6.9-4.5.9S9.2 3.5 7.5 3.5z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- Ícones (sprite) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M7.5 3.5c-2.2 0-4 1.8-4 4.2 0 2 .8 3.4 1.5 5 .7 1.6.8 3.4 1.3 5.1.3 1.1 1.1 2 2.2 2 1.4 0 1.6-1.9 2-3.2.3-1 .8-1.6 1.5-1.6s1.2.6 1.5 1.6c.4 1.3.6 3.2 2 3.2 1.1 0 1.9-.9 2.2-2 .5-1.7.6-3.5 1.3-5.1.7-1.6 1.5-3 1.5-5 0-2.4-1.8-4.2-4-4.2-1.7 0-2.6.9-4.5.9S9.2 3.5 7.5 3.5z"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+      <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+      <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+      <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.3 6 10.7a6 6 0 0 1-12 0C6 9.8 12 3.5 12 3.5z"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m11 3.5 1.9 5.1L18 10.5l-5.1 1.9L11 17.5l-1.9-5.1L4 10.5l5.1-1.9z"/><path d="M19 16.5v4M17 18.5h4"/></symbol>
+      <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 13.5c1 1.6 2.2 2.3 3.5 2.3s2.5-.7 3.5-2.3M9 9.5h.01M15 9.5h.01"/></symbol>
+      <symbol id="i-implant" viewBox="0 0 24 24"><path d="M8 4h8l-.8 3H8.8zM9 7.5h6M9.5 10.5h5M10 13.5h4M10.5 16.5h3M12 16.5v4"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s6.5-5.6 6.5-11a6.5 6.5 0 0 0-13 0C5.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+      <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+      <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="m4 20 1.3-4.2A8 8 0 1 1 8.3 18.8z"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Cabeçalho -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-wrap">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Áurea Odontologia, início">
+          <span class="brand-mark"><svg class="ic" aria-hidden="true"><use href="#i-tooth"/></svg></span>
+          <span class="brand-text"><strong>Áurea</strong><small>odontologia</small></span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Principal">
+          <a href="#clinica">A clínica</a>
+          <a href="#tratamentos">Tratamentos</a>
+          <a href="#equipe">Nossa equipe</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a class="btn btn-outline btn-sm" data-whatsapp href="#">Fale com a gente</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- Hero -->
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Cuidado que começa na conversa</p>
+            <h1 id="hero-title">Sorrir<br>sem medo.</h1>
+            <p class="lead">Um tempo para ouvir você. Um cuidado leve, do primeiro encontro ao seu novo sorriso.</p>
+            <div class="hero-actions">
+              <a class="btn btn-gold btn-lg" href="#agendar">
+                Agendar consulta
+                <span class="btn-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow-r"/></svg></span>
+              </a>
+              <p class="hero-note">No seu ritmo.<br>Sem pressa, sem julgamentos.</p>
+            </div>
+          </div>
+
+          <!-- Para usar uma foto real da equipe, defina no CSS: .team-art { --team-photo: url("img/equipe.jpg"); } -->
+          <div class="team-card">
+            <div class="team-art" aria-hidden="true">
+              <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice">
+                <g fill="none" stroke="#fff" stroke-linecap="round" opacity=".7">
+                  <circle cx="100" cy="86" r="54" stroke-width="1"/>
+                  <circle cx="100" cy="86" r="38" stroke-width="1" opacity=".7"/>
+                  <path d="M66 82c6 18 21 27 34 27s28-9 34-27" stroke-width="3"/>
+                </g>
+              </svg>
+            </div>
+            <div class="team-copy">
+              <h3>Gente cuidando de gente.</h3>
+              <p>Escuta atenta e conforto em cada detalhe.</p>
+            </div>
+          </div>
+
+          <div class="quick-wrap">
+            <aside class="quick-card" aria-labelledby="quick-title">
+              <div class="quick-top">
+                <span>Um espaço na sua rotina</span>
+                <svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>
+              </div>
+              <div class="quick-body">
+                <h2 id="quick-title">Vamos cuidar<br>do seu sorriso?</h2>
+                <p>Escolha um horário para a sua primeira visita.</p>
+                <ul class="quick-slots" id="quickSlots" aria-live="polite">
+                  <li class="quick-empty">Carregando horários…</li>
+                </ul>
+                <div class="quick-foot">
+                  <span class="live"><i aria-hidden="true"></i>Agenda online</span>
+                  <span id="quickCount"></span>
+                </div>
+              </div>
+            </aside>
+            <p class="quick-caption">Sua primeira consulta, com toda a atenção que você merece.</p>
+          </div>
+        </div>
+
+        <div class="hero-bar">
+          <span class="hero-bar-l"><svg class="ic" aria-hidden="true"><use href="#i-tooth"/></svg>Odontologia com cuidado e sem pressa</span>
+          <span class="hero-bar-r">Sua cidade, UF &nbsp;·&nbsp; Seg a sex, 8h às 18h30 &nbsp;·&nbsp; Sáb, 8h às 12h</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- A clínica -->
+    <section class="section" id="clinica" aria-labelledby="clinica-title">
+      <div class="container split">
+        <div class="split-head">
+          <h2 id="clinica-title">Odontologia com tempo para você.</h2>
+          <p class="lead">Um bom tratamento começa ouvindo. Cada consulta reserva um momento para entender sua história, suas dúvidas e o que você espera do seu sorriso.</p>
+        </div>
+        <div class="values">
+          <div class="value">
+            <h3>Conversa antes do tratamento</h3>
+            <p>Você conta o que sente e o que deseja. Só depois falamos de procedimentos.</p>
+          </div>
+          <div class="value">
+            <h3>Cada etapa explicada</h3>
+            <p>Mostramos o que será feito, por quê e quanto tempo leva, sem termos difíceis.</p>
+          </div>
+          <div class="value">
+            <h3>Um ambiente que acolhe</h3>
+            <p>Atendimento no seu ritmo, com pausas quando você precisar e conforto do início ao fim.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamentos -->
+    <section class="section section-tint" id="tratamentos" aria-labelledby="trat-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="trat-title">Cuidado para cada etapa do seu sorriso</h2>
+          <p class="lead">Escolha o procedimento e veja os horários disponíveis. Na primeira visita, a avaliação define o melhor caminho.</p>
+        </div>
+        <ul class="treat-list" id="treatmentList"></ul>
+        <noscript><p class="noscript">Para ver os tratamentos e agendar online, ative o JavaScript ou fale com a clínica pelo WhatsApp.</p></noscript>
+      </div>
+    </section>
+
+    <!-- Agendamento -->
+    <section class="section booking" id="agendar" aria-labelledby="agendar-title">
+      <div class="container booking-grid">
+        <div class="booking-intro">
+          <h2 id="agendar-title">Reserve seu horário em poucos passos.</h2>
+          <p class="lead">Leva cerca de um minuto. Você escolhe o procedimento, o dia e o horário, e a clínica confirma com você.</p>
+          <ul class="checklist">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Escolha o procedimento, o dia e o horário</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Confirmação combinada pelo WhatsApp da clínica</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Convite para a sua agenda, no Google Agenda ou em arquivo .ics</li>
+          </ul>
+
+          <div class="summary" aria-live="polite">
+            <h3>Sua reserva</h3>
+            <dl>
+              <div><dt>Procedimento</dt><dd id="sumTreatment">—</dd></div>
+              <div><dt>Data</dt><dd id="sumDate">—</dd></div>
+              <div><dt>Horário</dt><dd id="sumTime">—</dd></div>
+              <div><dt>Duração</dt><dd id="sumDuration">—</dd></div>
+            </dl>
+          </div>
+
+          <p class="urgent">Está com dor forte ou precisa de atendimento hoje? <a data-whatsapp href="#">Chame a clínica no WhatsApp</a>.</p>
+        </div>
+
+        <div class="booking-card" id="bookingCard">
+          <div class="booking-top">
+            <ol class="stepper" id="stepper" aria-label="Etapas do agendamento">
+              <li data-step="1"><button type="button"><span class="step-n">1</span><span class="step-l">Procedimento</span></button></li>
+              <li data-step="2"><button type="button"><span class="step-n">2</span><span class="step-l">Data e hora</span></button></li>
+              <li data-step="3"><button type="button"><span class="step-n">3</span><span class="step-l">Seus dados</span></button></li>
+            </ol>
+            <button type="button" class="text-btn" id="myBookingsBtn" hidden>Minhas consultas (<span id="myCount">0</span>)</button>
+          </div>
+
+          <form id="bookingForm" novalidate>
+            <div class="step" data-step="1">
+              <h3 class="step-title" tabindex="-1">Qual cuidado você procura?</h3>
+              <p class="step-sub">Se estiver em dúvida, comece pela avaliação inicial.</p>
+              <div class="opts" id="treatmentOptions" role="radiogroup" aria-label="Procedimento"></div>
+            </div>
+
+            <div class="step" data-step="2" hidden>
+              <h3 class="step-title" tabindex="-1">Quando fica melhor para você?</h3>
+              <div class="date-head">
+                <p class="step-sub">Escolha o dia e depois o horário.</p>
+                <div class="arrows">
+                  <button type="button" class="icon-btn" id="datePrev" aria-label="Dias anteriores"><svg class="ic" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+                  <button type="button" class="icon-btn" id="dateNext" aria-label="Próximos dias"><svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+                </div>
+              </div>
+              <div class="date-strip" id="dateStrip" role="radiogroup" aria-label="Dia da consulta"></div>
+              <div id="slotsWrap" aria-live="polite"></div>
+            </div>
+
+            <div class="step" data-step="3" hidden>
+              <h3 class="step-title" tabindex="-1">Como podemos falar com você?</h3>
+              <p class="step-sub">Usamos estes dados só para confirmar a sua consulta.</p>
+              <div class="fields">
+                <div class="field">
+                  <label for="f-name">Nome completo</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" aria-describedby="err-name">
+                  <p class="field-error" id="err-name"></p>
+                </div>
+                <div class="field">
+                  <label for="f-phone">WhatsApp</label>
+                  <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" aria-describedby="err-phone">
+                  <p class="field-error" id="err-phone"></p>
+                </div>
+                <div class="field span-2">
+                  <label for="f-email">E-mail <span class="opt-tag">(opcional)</span></label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" aria-describedby="err-email">
+                  <p class="field-error" id="err-email"></p>
+                </div>
+                <fieldset class="field span-2 choice">
+                  <legend>Já é paciente da clínica?</legend>
+                  <label class="pill"><input type="radio" name="patient" value="nao" checked><span>Ainda não</span></label>
+                  <label class="pill"><input type="radio" name="patient" value="sim"><span>Sim, já sou</span></label>
+                </fieldset>
+                <div class="field span-2">
+                  <label for="f-notes">Quer nos contar algo? <span class="opt-tag">(opcional)</span></label>
+                  <textarea id="f-notes" name="notes" rows="3" placeholder="Convênio, receios, o que você gostaria de resolver…"></textarea>
+                </div>
+                <div class="field span-2 consent">
+                  <label class="check">
+                    <input type="checkbox" id="f-consent" name="consent" aria-describedby="err-consent">
+                    <span>Autorizo a clínica a usar estes dados para confirmar a minha consulta.</span>
+                  </label>
+                  <p class="field-error" id="err-consent"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" id="btnBack" hidden>Voltar</button>
+              <button type="button" class="btn btn-gold" id="btnNext" disabled>
+                <span id="btnNextLabel">Continuar</span>
+                <svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="success" id="success" hidden>
+            <div class="success-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22"/><path d="m14 25 7 7 13-15"/></svg>
+            </div>
+            <h3 class="step-title" id="successTitle" tabindex="-1">Consulta reservada!</h3>
+            <p class="step-sub">Guarde o código abaixo. Para finalizar, envie a confirmação pelo WhatsApp da clínica.</p>
+            <dl class="receipt">
+              <div><dt>Código</dt><dd id="sCode" class="code">—</dd></div>
+              <div><dt>Procedimento</dt><dd id="sTreatment">—</dd></div>
+              <div><dt>Data</dt><dd id="sDate">—</dd></div>
+              <div><dt>Horário</dt><dd id="sTime">—</dd></div>
+              <div><dt>Paciente</dt><dd id="sName">—</dd></div>
+            </dl>
+            <div class="success-actions">
+              <a class="btn btn-gold" id="aWhats" href="#" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Confirmar pelo WhatsApp</a>
+              <a class="btn btn-outline" id="aGcal" href="#" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Adicionar ao Google Agenda</a>
+              <button class="btn btn-outline" id="btnIcs" type="button"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Baixar convite (.ics)</button>
+            </div>
+            <button class="text-btn" id="btnNew" type="button">Fazer outro agendamento</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="section" id="equipe" aria-labelledby="equipe-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="equipe-title">Quem cuida de você</h2>
+          <p class="lead">Profissionais que explicam cada etapa e respeitam o seu tempo.</p>
+        </div>
+        <!-- Nomes e especialidades de exemplo: substitua pelos da sua equipe. -->
+        <ul class="team">
+          <li><span class="avatar" aria-hidden="true">HD</span><h3>Dra. Helena Duarte</h3><p>Clínica geral e estética</p></li>
+          <li><span class="avatar" aria-hidden="true">RM</span><h3>Dr. Rafael Monteiro</h3><p>Implantodontia</p></li>
+          <li><span class="avatar" aria-hidden="true">BL</span><h3>Dra. Beatriz Lemos</h3><p>Ortodontia</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Dúvidas -->
+    <section class="section section-tint" id="duvidas" aria-labelledby="duvidas-title">
+      <div class="container faq-wrap">
+        <div class="section-head">
+          <h2 id="duvidas-title">Dúvidas frequentes</h2>
+          <p class="lead">Não achou o que procurava? Fale com a gente pelo <a data-whatsapp href="#">WhatsApp</a>.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Como funciona o agendamento online?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Você escolhe o procedimento, o dia e o horário. Depois de enviar seus dados, combinamos a confirmação pelo WhatsApp.</p>
+          </details>
+          <details>
+            <summary>Posso remarcar ou cancelar?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Pode. Avise pelo WhatsApp com antecedência e encontramos um novo horário. Neste site, “Minhas consultas” também permite cancelar reservas feitas neste navegador.</p>
+          </details>
+          <details>
+            <summary>Vocês atendem pelo meu convênio?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Conte qual é o seu convênio no campo de observações do agendamento e retornamos com as informações de cobertura antes da consulta.</p>
+          </details>
+          <details>
+            <summary>Estou com dor ou tive um acidente. E agora?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Em casos de dor forte, inchaço ou trauma, chame a clínica pelo WhatsApp para avaliarmos o melhor encaminhamento, sem esperar por um horário comum.</p>
+          </details>
+          <details>
+            <summary>O que levar na primeira consulta?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Um documento com foto e, se tiver, exames e radiografias recentes. Se não tiver nada, tudo bem: começamos pela conversa.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#top" aria-label="Áurea Odontologia, início">
+          <span class="brand-mark"><svg class="ic" aria-hidden="true"><use href="#i-tooth"/></svg></span>
+          <span class="brand-text"><strong>Áurea</strong><small>odontologia</small></span>
+        </a>
+        <p>Odontologia com cuidado, escuta e tempo para você.</p>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <p>Segunda a sexta, 8h às 18h30<br>Sábado, 8h às 12h<br>Fechado aos domingos e feriados</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Rua Exemplo, 123 · Centro<br>Sua cidade, UF</p>
+        <p><a data-whatsapp href="#">WhatsApp</a> · <a href="mailto:contato@exemplo.com.br">contato@exemplo.com.br</a></p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <span>© <span id="year">2026</span> Áurea Odontologia. Todos os direitos reservados.</span>
+      <button type="button" class="text-btn on-dark" data-open-bookings>Minhas consultas</button>
+    </div>
+  </footer>
+
+  <!-- Minhas consultas -->
+  <dialog id="myDialog" aria-labelledby="myTitle">
+    <div class="dialog-head">
+      <h3 id="myTitle">Minhas consultas</h3>
+      <button type="button" class="icon-btn" id="myClose" aria-label="Fechar"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <ul class="my-list" id="myList"></ul>
+    <p class="dialog-note">As reservas ficam salvas neste navegador. Para alterar a data, fale com a clínica pelo WhatsApp.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
