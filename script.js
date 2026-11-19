@@ -15,9 +15,9 @@
   const SATURDAY = [[8 * 60, 12 * 60]];                              // 08:00–12:00
 
   const CLINIC = {
-    name: 'Áurea Odontologia',
-    whatsapp: '5500000000000',                 // DDI + DDD + número, só dígitos. TROQUE pelo número real.
-    address: 'Rua Exemplo, 123 · Centro, Sua cidade, UF',
+    name: 'HS Odontologia',
+    whatsapp: '+55 67 993292442',                 // DDI + DDD + número, só dígitos. TROQUE pelo número real.
+    address: 'Rua Ceará, 1042 · Vila Barbosa, Aparecida do Taboado, MS',
     slotGrid: 30,                              // intervalo entre horários, em minutos
     leadMinutes: 60,                           // antecedência mínima para reservar no mesmo dia
     daysAhead: 28,                             // quantos dias à frente a agenda fica aberta
